@@ -3,6 +3,7 @@ package com.example.bibliotheque.bo
 class ConnectionInformationBO {
 
     var username : String = ""
+    var displayName : String = ""
     var cookies : List<String> = listOf()
     var authenticated : Boolean = false
 

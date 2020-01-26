@@ -1,6 +1,9 @@
 package com.example.bibliotheque.data
 
+import com.example.bibliotheque.bo.ConnectionInformationBO
 import com.example.bibliotheque.data.model.LoggedInUser
+import com.example.bibliotheque.services.LibraryService
+import com.example.bibliotheque.services.impl.LibraryHauteGoulaineServiceImpl
 import java.io.IOException
 
 /**
@@ -8,13 +11,13 @@ import java.io.IOException
  */
 class LoginDataSource {
 
-    fun login(username: String, password: String): Result<LoggedInUser> {
-        try {
-            // TODO: handle loggedInUser authentication
-            val fakeUser = LoggedInUser(java.util.UUID.randomUUID().toString(), "Jane Doe")
-            return Result.Success(fakeUser)
-        } catch (e: Throwable) {
-            return Result.Error(IOException("Error logging in", e))
+    private val hauteGoulaineLibraryService : LibraryService = LibraryHauteGoulaineServiceImpl()
+
+    fun login(username: String, password: String): Result<ConnectionInformationBO> {
+            val userInformation : ConnectionInformationBO = this.hauteGoulaineLibraryService.authenticate(username, password)
+        return when(userInformation.isAuthenticated()) {
+            true -> Result.Success(userInformation)
+            false -> Result.Error(IOException("User is not logged"))
         }
     }
 

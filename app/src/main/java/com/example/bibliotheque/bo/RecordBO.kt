@@ -1,8 +1,8 @@
 package com.example.bibliotheque.bo
 
-class RecordBO {
+import com.squareup.moshi.JsonClass
 
-    val id: Integer? = null
-    val thumbnail: String = ""
+@JsonClass(generateAdapter = true)
+data class RecordBO(val id: Int, val thumbnail: String) {
 
 }

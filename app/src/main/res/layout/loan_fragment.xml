@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".data.Fragment.Loan.LoanFragment">
+
+    <ImageView
+        android:id="@+id/loanImage"
+        android:layout_width="78dp"
+        android:layout_height="84dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/loanTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="194dp"
+        android:text="test"
+        android:textColor="@android:color/tertiary_text_light"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/dueDate"
+        app:layout_constraintStart_toEndOf="@+id/loanImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loanAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a"
+        app:layout_constraintStart_toStartOf="@+id/loanTitle"
+        tools:layout_editor_absoluteY="33dp"
+        tools:text="Author" />
+
+    <TextView
+        android:id="@+id/loanUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="379dp"
+        tools:layout_editor_absoluteY="33dp"
+        tools:text="User" />
+
+    <TextView
+        android:id="@+id/dueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/loanUser"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="01/01/2020" />
+</androidx.constraintlayout.widget.ConstraintLayout>

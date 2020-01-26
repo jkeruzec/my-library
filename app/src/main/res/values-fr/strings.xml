@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bibliotheque</string>
+    <string name="login_failed">Identifiant ou mot de passe incorrect</string>
+    <string name="prompt_password">Mot de passe (Année de naissance)</string>
+    <string name="welcome">Bienvenue</string>
+    <string name="invalid_username">Identifiant ou mot de passe incorrect</string>
+    <string name="prompt_login">Numéro de carte (Axxxxxxxx)</string>
+    <string name="invalid_password">Identifiant ou mot de passe incorrect</string>
+    <string name="action_sign_in_short">Connexion</string>
+    <string name="action_sign_in">Connexion</string>
+    <string name="remember_me">Se souvenir de moi</string>
+</resources>
