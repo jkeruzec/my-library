@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.bibliotheque.R
+import com.example.bibliotheque.data.Fragment.Loan.LoanFragment
 
 class LoansFragment : Fragment() {
 
@@ -22,6 +23,12 @@ class LoansFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.loans_fragment, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        var loanFragment : LoanFragment = LoanFragment()
+        var loanFragment2 : LoanFragment = LoanFragment()
+        childFragmentManager.beginTransaction().add(R.id.loansFragmentContainer, loanFragment).add(R.id.loansFragmentContainer, loanFragment2).commit()
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

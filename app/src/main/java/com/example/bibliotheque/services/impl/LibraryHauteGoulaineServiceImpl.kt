@@ -39,14 +39,14 @@ class LibraryHauteGoulaineServiceImpl : LibraryService {
             var dateFormat: SimpleDateFormat = SimpleDateFormat("yyyy-MM-dd")
             @ToJson
             @Synchronized
-            fun dateToJson(d: Date?): String? {
+            fun dateToJson(d: Date): String? {
                 return dateFormat.format(d)
             }
 
             @FromJson
             @Synchronized
             @Throws(ParseException::class)
-            fun dateToJson(s: String?): Date? {
+            fun dateToJson(s: String): Date? {
                 return dateFormat.parse(s)
             }
         }

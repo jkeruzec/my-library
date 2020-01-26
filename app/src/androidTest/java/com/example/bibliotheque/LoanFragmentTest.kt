@@ -1,7 +1,10 @@
 package com.example.bibliotheque
 
+import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.example.bibliotheque.data.Fragment.Loan.LoanFragment
+import com.example.bibliotheque.data.Fragment.Loans.LoansFragment
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -14,11 +17,25 @@ import org.junit.Assert.*
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 @RunWith(AndroidJUnit4::class)
-class ExampleInstrumentedTest {
+class LoanFragmentTest {
+
     @Test
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.example.bibliotheque", appContext.packageName)
     }
+
+    @Test
+    fun loanIsDisplayed() {
+        launchFragmentInContainer<LoanFragment>()
+        println()
+    }
+
+    @Test
+    fun loansIsDisplayed() {
+        launchFragmentInContainer<LoansFragment>()
+        println()
+    }
+
 }

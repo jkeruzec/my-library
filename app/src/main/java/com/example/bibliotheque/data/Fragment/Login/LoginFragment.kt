@@ -16,9 +16,14 @@ import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.example.bibliotheque.BuildConfig
 
 import com.example.bibliotheque.R
 import com.example.bibliotheque.ui.login.LoggedInUserView
+import java.io.File
+import java.io.FileReader
+import java.nio.file.Paths
+import java.util.*
 
 class LoginFragment : Fragment() {
 
